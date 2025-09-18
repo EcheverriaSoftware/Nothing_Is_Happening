@@ -1,0 +1,22 @@
+{
+  "name": "Nothing Is Happening — Hide 'What's happening' on X",
+  "description": "Hides the 'What's happening' section across all pages on X/Twitter.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [
+        "http://x.com/*",
+        "https://x.com/*",
+        "http://www.x.com/*",
+        "https://www.x.com/*",
+        "http://twitter.com/*",
+        "https://twitter.com/*",
+        "http://www.twitter.com/*",
+        "https://www.twitter.com/*"
+      ],
+      "js": ["src/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
